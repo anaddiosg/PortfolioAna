@@ -21,7 +21,7 @@ export const hero = {
 };
 
 export const proofPoints = [
-  { value: "+35%", label: "young users", source: "ViX Micro, in five months" },
+  { value: "+35%", label: "young users", source: "ViX Micro, in six months" },
   { value: "326M+", label: "views in its first year", source: "ViX Micro" },
   { value: "2,000+", label: "users in two months", source: "confibud" },
 ];
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     tags: ["TelevisaUnivision", "Streaming", "Mobile"],
     summary:
       "A vertical, short-form series experience designed to bring younger audiences to TelevisaUnivision's streaming platform.",
-    metrics: ["+35% young users", "+20% premium users in Mexico", "5 months"],
+    metrics: ["+35% young users", "+20% premium users in Mexico", "6 months"],
     image: "/images/vix-micro-cover.png",
     imageAlt: "A hand holding a phone with the ViX app open on the ViX Micro section",
     ready: false,
