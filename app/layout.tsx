@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Ana De Dios — Portfolio",
   description:
-    "UX/UI Designer who turns ideas into solid interfaces and clear, build-ready flows.",
+    "Product Designer who turns ideas into solid interfaces and clear, build-ready flows.",
 };
 
 // The layout wraps every page of the site.

@@ -7,7 +7,7 @@ export default function Home() {
       </p>
       <h1>Ana De Dios</h1>
       <p className="lead">
-        UX/UI Designer who turns ideas into solid interfaces and clear,
+        Product Designer who turns ideas into solid interfaces and clear,
         build-ready flows.
       </p>
       <a href="mailto:anaddiosg@gmail.com">anaddiosg@gmail.com</a>
