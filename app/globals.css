@@ -1,55 +1,141 @@
-/* Phase 0 styles. In phase 1 these become the design system (colors, type, spacing). */
+/* ==========================================================
+   DESIGN TOKENS
+   Every color, font and size the site uses is defined here once.
+   Change a value here and it updates everywhere.
+   ========================================================== */
 :root {
-  --paper: #faf8f5;
-  --ink: #16151a;
-  --violet: #53008e;
-  --muted: #6b6870;
+  /* Color */
+  --paper: #faf8f5;      /* page background: warm white, no lilac tint */
+  --surface: #ffffff;    /* cards */
+  --ink: #16151a;        /* main text */
+  --muted: #6b6870;      /* secondary text */
+  --line: #e6e1d9;       /* dividers and borders */
+  --violet: #53008e;     /* brand color, taken from the CV */
+  --fresh: #d7f25c;      /* fresh accent: lime (variant A). Variant B = mint #5fe3b0 */
+
+  /* Type: the font variables are created in app/layout.tsx */
+  --serif: var(--font-serif), Georgia, serif;
+  --sans: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: var(--font-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Layout */
+  --max-width: 1200px;
+  --gutter: clamp(16px, 4vw, 48px); /* 16px on phones, up to 48px on desktop */
+  --radius: 20px;
 }
 
-* { box-sizing: border-box; margin: 0; }
+/* ==========================================================
+   BASE
+   ========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-.placeholder {
-  min-height: 100vh;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--fresh);
+  color: var(--ink);
+}
+
+/* Visible focus ring for keyboard users (accessibility) */
+:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ==========================================================
+   SHARED HELPERS
+   ========================================================== */
+
+/* Centers content and adds side padding */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Small monospaced label, e.g. "• Selected work" */
 .label {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--mono);
   font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   color: var(--muted);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-/* The dot from the A•DIOS logo: the site's signature detail. */
+/* The violet dot from the A•DIOS logo: the site's signature detail */
 .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--violet);
+  flex-shrink: 0;
 }
 
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
-  font-size: clamp(48px, 10vw, 88px);
-  line-height: 1;
-  letter-spacing: -0.02em;
+/* "Skip to content" link, only visible when focused with the keyboard */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 8px 14px;
+  border-radius: 8px;
+  z-index: 10;
+}
+.skip-link:focus {
+  top: 16px;
 }
 
-.lead { font-size: 20px; line-height: 1.5; max-width: 32ch; }
+/* Entrance animation: content rises gently into place */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
-a { color: var(--ink); text-underline-offset: 4px; }
+/* Respect people who ask their device for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

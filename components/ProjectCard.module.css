@@ -1,0 +1,76 @@
+/* Phones: image on top, text below. Desktop: image left, text right. */
+.card {
+  display: grid;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  padding: clamp(16px, 2.5vw, 28px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 760px) {
+  .card {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+/* Cards that link to a case study lift slightly on hover */
+.linked {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.linked:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgb(22 21 26 / 0.08);
+}
+
+.media img {
+  width: 100%;
+  border-radius: calc(var(--radius) - 6px);
+}
+
+.body {
+  padding-block: 8px;
+}
+
+.title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-top: 16px;
+}
+
+.summary {
+  margin-top: 16px;
+  max-width: 46ch;
+  font-size: 18px;
+}
+
+/* Metrics as small pills with the fresh accent */
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.metrics li {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--fresh);
+}
+
+.cta {
+  margin-top: 32px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--violet);
+}

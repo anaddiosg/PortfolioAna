@@ -1,0 +1,88 @@
+/* ---------- HERO ---------- */
+.hero {
+  padding-block: clamp(56px, 10vw, 128px) clamp(56px, 8vw, 96px);
+}
+
+/* Each hero element rises in, one after the other */
+.hero > * {
+  animation: rise 0.7s ease both;
+}
+.hero > *:nth-child(2) { animation-delay: 0.08s; }
+.hero > *:nth-child(3) { animation-delay: 0.16s; }
+.hero > *:nth-child(4) { animation-delay: 0.24s; }
+
+.headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(40px, 6.4vw, 84px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 17ch;
+  margin-top: 28px;
+}
+
+/* "clear, build-ready flows." in violet italic */
+.headline em {
+  color: var(--violet);
+}
+
+.intro {
+  margin-top: 28px;
+  max-width: 52ch;
+  font-size: clamp(18px, 1.6vw, 21px);
+  color: var(--ink);
+}
+
+/* Proof points: three columns on desktop, stacked on phones */
+.proof {
+  display: grid;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin-top: clamp(48px, 7vw, 80px);
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+
+@media (min-width: 760px) {
+  .proof {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.proof li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Big number with a fresh highlighter stroke behind its lower half */
+.value {
+  font-family: var(--serif);
+  font-size: clamp(48px, 5vw, 64px);
+  line-height: 1.1;
+  align-self: flex-start;
+  background: linear-gradient(transparent 58%, var(--fresh) 58%, var(--fresh) 90%, transparent 90%);
+  padding-inline: 4px;
+}
+
+.proofLabel {
+  font-size: 17px;
+}
+
+.source {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- SELECTED WORK ---------- */
+.work {
+  padding-top: clamp(32px, 5vw, 48px);
+}
+
+.projects {
+  display: grid;
+  gap: clamp(24px, 4vw, 40px);
+  margin-top: 28px;
+}
