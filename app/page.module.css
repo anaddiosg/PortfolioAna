@@ -12,18 +12,19 @@
 .hero > *:nth-child(4) { animation-delay: 0.24s; }
 
 .headline {
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--display);
+  font-weight: var(--display-weight);
   font-size: clamp(40px, 6.4vw, 84px);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   max-width: 17ch;
   margin-top: 28px;
 }
 
-/* "clear, build-ready flows." in violet italic */
+/* "clear, build-ready flows." highlighted in violet */
 .headline em {
   color: var(--violet);
+  font-style: normal;
 }
 
 .intro {
@@ -58,7 +59,8 @@
 
 /* Big number with a fresh highlighter stroke behind its lower half */
 .value {
-  font-family: var(--serif);
+  font-family: var(--display);
+  font-weight: var(--display-weight);
   font-size: clamp(48px, 5vw, 64px);
   line-height: 1.1;
   align-self: flex-start;

@@ -11,10 +11,11 @@
   --muted: #6b6870;      /* secondary text */
   --line: #e6e1d9;       /* dividers and borders */
   --violet: #53008e;     /* brand color, taken from the CV */
-  --fresh: #d7f25c;      /* fresh accent: lime (variant A). Variant B = mint #5fe3b0 */
+  --fresh: #d7f25c;      /* fresh accent: lime */
 
   /* Type: the font variables are created in app/layout.tsx */
-  --serif: var(--font-serif), Georgia, serif;
+  --display: var(--font-display), system-ui, sans-serif; /* headlines */
+  --display-weight: 300; /* Light. Raise to 400 for Regular */
   --sans: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: var(--font-mono), ui-monospace, "SF Mono", Menlo, monospace;
 

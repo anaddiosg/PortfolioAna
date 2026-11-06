@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { hero, site } from "@/content/site";
@@ -7,12 +7,8 @@ import "./globals.css";
 
 // Fonts are downloaded at build time and served from your own site (faster, private).
 // Each one becomes a CSS variable that globals.css uses.
-const serif = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-serif",
-});
+// Bricolage Grotesque for headlines (used in Light, weight 300), Geist for body text.
+const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display" });
 const sans = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
@@ -25,7 +21,7 @@ export const metadata: Metadata = {
 // The layout wraps every page: header on top, footer at the bottom.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <body>
         <a className="skip-link" href="#main">
           Skip to content

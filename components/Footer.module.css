@@ -15,16 +15,17 @@
 }
 
 .title {
-  font-family: var(--serif);
-  font-weight: 400;
+  font-family: var(--display);
+  font-weight: var(--display-weight);
   font-size: clamp(56px, 10vw, 120px);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   margin-top: 24px;
 }
 
 .title em {
   color: var(--fresh);
+  font-style: normal;
 }
 
 .email {
