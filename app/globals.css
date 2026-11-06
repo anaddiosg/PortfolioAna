@@ -1,0 +1,54 @@
+/* Phase 0 styles. In phase 1 these become the design system (colors, type, spacing). */
+:root {
+  --paper: #f7f4ef;
+  --ink: #16151a;
+  --muted: #6b6870;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.placeholder {
+  min-height: 100vh;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.label {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* The dot from the A•DIOS logo: the site's signature detail. */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(48px, 10vw, 88px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.lead { font-size: 20px; line-height: 1.5; max-width: 32ch; }
+
+a { color: var(--ink); text-underline-offset: 4px; }
