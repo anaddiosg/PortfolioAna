@@ -18,6 +18,10 @@ export default function Footer() {
           {site.email}
         </a>
 
+        <a href={site.phoneLink} className={styles.phone}>
+          {site.phone}
+        </a>
+
         <ul className={styles.links}>
           <li>
             <a href={site.linkedin} target="_blank" rel="noopener">

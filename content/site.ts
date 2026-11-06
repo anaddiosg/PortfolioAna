@@ -6,6 +6,8 @@ export const site = {
   role: "Product Designer",
   location: "Mexico City",
   email: "anaddiosg@gmail.com",
+  phone: "+52 56 1012 7359",
+  phoneLink: "tel:+525610127359", // same number without spaces, so phones can call it
   linkedin: "https://www.linkedin.com/in/anadedios1",
   cv: "/Ana-De-Dios-CV.pdf",
 };
