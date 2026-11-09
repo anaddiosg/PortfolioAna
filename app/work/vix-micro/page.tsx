@@ -82,6 +82,7 @@ export default function VixMicroCaseStudy() {
           height={1820}
           caption="The first flow: from opening the app to watching a Micro"
           wide
+          tone="dark"
         />
       </Section>
 
@@ -129,28 +130,29 @@ export default function VixMicroCaseStudy() {
           height={1496}
           caption="The final flow, with the share button and the episode selector"
           wide
+          tone="dark"
         />
         <Gallery
           items={[
             {
-              src: "/images/vix-micro/screen-home.jpg",
+              src: "/images/vix-micro/screen-home.png",
               alt: "ViX home screen featuring a ViX Micro title",
               caption: "ViX Micro on the home screen",
-              width: 686,
+              width: 687,
               height: 1400,
             },
             {
-              src: "/images/vix-micro/screen-micros.jpg",
+              src: "/images/vix-micro/screen-micros.png",
               alt: "The Micros section with a grid of vertical series",
               caption: "The Micros section",
-              width: 686,
+              width: 687,
               height: 1400,
             },
             {
-              src: "/images/vix-micro/screen-player.jpg",
+              src: "/images/vix-micro/screen-player.png",
               alt: "Vertical player showing episode 1 with share and episode controls",
               caption: "The vertical player",
-              width: 686,
+              width: 687,
               height: 1400,
             },
           ]}

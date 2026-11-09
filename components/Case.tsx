@@ -103,7 +103,10 @@ export function Callout({ children, kicker }: { children: React.ReactNode; kicke
   );
 }
 
-/* An image with a caption. "wide" lets it break out of the text column */
+/* An image with a caption.
+   wide: lets it break out of the text column.
+   tone: "card" = white frame (photos), "dark" = dark panel (flows with white arrows),
+         "plain" = no frame at all (transparent PNGs). */
 export function Figure({
   src,
   alt,
@@ -111,6 +114,7 @@ export function Figure({
   height,
   caption,
   wide = false,
+  tone = "card",
 }: {
   src: string;
   alt: string;
@@ -118,9 +122,10 @@ export function Figure({
   height: number;
   caption?: string;
   wide?: boolean;
+  tone?: "card" | "dark" | "plain";
 }) {
   return (
-    <figure className={`${styles.figure} ${wide ? styles.wide : ""}`}>
+    <figure className={`${styles.figure} ${styles[tone]} ${wide ? styles.wide : ""}`}>
       <Image
         src={src}
         alt={alt}
@@ -207,7 +212,7 @@ export function Gallery({
   return (
     <div className={styles.gallery}>
       {items.map((item) => (
-        <figure key={item.src} className={styles.figure}>
+        <figure key={item.src} className={`${styles.figure} ${styles.plain}`}>
           <Image
             src={item.src}
             alt={item.alt}

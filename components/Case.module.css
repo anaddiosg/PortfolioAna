@@ -171,9 +171,26 @@
 
 .figure img {
   width: 100%;
+}
+
+/* Photos and screenshots: white frame */
+.card img {
   border-radius: calc(var(--radius) - 4px);
   border: 1px solid var(--line);
   background: #fff;
+}
+
+/* Flows with white arrows: dark panel so the lines stay visible */
+.dark img {
+  padding: clamp(12px, 3vw, 40px);
+  border-radius: var(--radius);
+  background: var(--ink);
+}
+
+/* Transparent PNGs (phones): no frame */
+.plain img {
+  background: none;
+  border: none;
 }
 
 .figure figcaption {
@@ -184,9 +201,10 @@
 }
 
 /* ---------- STATS ---------- */
+/* Flex (not grid) so the last row stretches to fill the width: no empty cells */
 .stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1px;
   list-style: none;
   padding: 0;
@@ -197,6 +215,7 @@
 }
 
 .stats li {
+  flex: 1 1 220px;
   display: flex;
   flex-direction: column;
   gap: 8px;
