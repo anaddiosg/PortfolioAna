@@ -9,7 +9,7 @@ export const vixMicro = {
     src: "/images/vix-micro/cover.jpg",
     alt: "A hand holding a phone with the ViX app open, featuring a ViX Micro title",
     width: 2000,
-    height: 1667,
+    height: 1188,
   },
 
   overview: [
