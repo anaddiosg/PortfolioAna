@@ -46,9 +46,9 @@ export const projects: Project[] = [
     summary:
       "A vertical, short-form series experience designed to bring younger audiences to TelevisaUnivision's streaming platform.",
     metrics: ["+35% young users", "+20% premium users in Mexico", "6 months"],
-    image: "/images/vix-micro-cover.png",
+    image: "/images/vix-micro-cover.jpg",
     imageAlt: "A hand holding a phone with the ViX app open on the ViX Micro section",
-    ready: false,
+    ready: true,
   },
   {
     slug: "confibud",

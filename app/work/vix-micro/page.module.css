@@ -1,0 +1,66 @@
+/* ViX Micro uses ViX orange as its accent */
+.page {
+  --case-accent: #ff5b00;
+}
+
+/* Numbered or bulleted lists inside the text column */
+.listProse {
+  max-width: 68ch;
+}
+.listProse ol,
+.listProse ul {
+  padding-left: 1.2em;
+}
+.listProse li {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.listProse li + li {
+  margin-top: 0.6em;
+}
+.listProse li::marker {
+  color: var(--case-accent);
+}
+.listProse strong {
+  font-weight: 600;
+}
+
+/* Key decisions: big number on the left, text on the right */
+.decisions {
+  list-style: none;
+  padding: 0;
+  max-width: 820px;
+}
+
+.decisions li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.decisions li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.decisionNumber {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--case-accent);
+  padding-top: 6px;
+}
+
+.decisions h4 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.decisions p {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 68ch;
+}
