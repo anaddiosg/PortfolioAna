@@ -1,6 +1,6 @@
-/* ViX Micro uses ViX orange as its accent */
+/* ViX Micro uses ViX orange as its accent, darkened so small text passes WCAG AA contrast */
 .page {
-  --case-accent: #ff5b00;
+  --case-accent: #c24400;
 }
 
 /* Numbered or bulleted lists inside the text column */
@@ -51,7 +51,7 @@
   padding-top: 6px;
 }
 
-.decisions h4 {
+.decisions h3 {
   font-family: var(--display);
   font-weight: 400;
   font-size: 24px;

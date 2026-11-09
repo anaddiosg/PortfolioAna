@@ -10,6 +10,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: `About · ${site.name}`,
   description: about.headline,
+  openGraph: { title: `About · ${site.name}`, description: about.headline },
 };
 
 export default function AboutPage() {

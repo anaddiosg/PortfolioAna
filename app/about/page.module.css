@@ -179,6 +179,7 @@
 
 .caseLink {
   display: inline-block;
+  padding-block: 6px;
   margin-top: 14px;
   font-family: var(--mono);
   font-size: 14px;

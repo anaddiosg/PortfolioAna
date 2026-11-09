@@ -14,8 +14,18 @@ const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 // What appears in the browser tab and when the link is shared.
 export const metadata: Metadata = {
+  metadataBase: new URL("https://anadedios.vercel.app"),
   title: `${site.name} · ${site.role}`,
   description: `${hero.headline} ${hero.highlight}`,
+  // How the link looks when it's shared on LinkedIn, WhatsApp, Slack, etc.
+  openGraph: {
+    type: "website",
+    siteName: `${site.name} · ${site.role}`,
+    locale: "en_US",
+    title: `${site.name} · ${site.role}`,
+    description: `${hero.headline} ${hero.highlight}`,
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 // The layout wraps every page: header on top, footer at the bottom.

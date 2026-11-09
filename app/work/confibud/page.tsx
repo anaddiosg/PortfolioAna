@@ -24,6 +24,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "confibud · Ana De Dios Gibson",
   description: c.lead,
+  openGraph: { title: "confibud · Ana De Dios Gibson", description: c.lead },
 };
 
 export default function ConfibudCaseStudy() {
@@ -154,7 +155,7 @@ export default function ConfibudCaseStudy() {
             <li key={f.title}>
               <span className={styles.findingNumber}>{String(i + 1).padStart(2, "0")}</span>
               <div>
-                <h4>{f.title}</h4>
+                <h3>{f.title}</h3>
                 <p>{f.text}</p>
               </div>
             </li>

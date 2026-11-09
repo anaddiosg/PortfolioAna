@@ -179,7 +179,7 @@ export function Cards({
               {item.tag && <span className={styles.tag}>{item.tag}</span>}
             </p>
           )}
-          <h4 className={styles.cardTitle}>{item.title}</h4>
+          <h3 className={styles.cardTitle}>{item.title}</h3>
           {item.text && <p className={styles.cardText}>{item.text}</p>}
         </li>
       ))}

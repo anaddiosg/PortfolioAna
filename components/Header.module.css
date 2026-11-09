@@ -18,6 +18,7 @@
 .wordmark {
   display: inline-flex;
   align-items: center;
+  padding-block: 8px;
   color: var(--ink);
   text-decoration: none;
 }
@@ -45,6 +46,8 @@
 }
 
 .nav a {
+  display: inline-block;
+  padding-block: 8px;
   text-decoration: none;
 }
 

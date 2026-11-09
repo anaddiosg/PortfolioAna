@@ -20,6 +20,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "ViX Micro · Ana De Dios Gibson",
   description: c.lead,
+  openGraph: { title: "ViX Micro · Ana De Dios Gibson", description: c.lead },
 };
 
 export default function VixMicroCaseStudy() {
@@ -116,7 +117,7 @@ export default function VixMicroCaseStudy() {
             <li key={d.title}>
               <span className={styles.decisionNumber}>{String(i + 1).padStart(2, "0")}</span>
               <div>
-                <h4>{d.title}</h4>
+                <h3>{d.title}</h3>
                 <p>{d.text}</p>
               </div>
             </li>

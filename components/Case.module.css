@@ -9,6 +9,7 @@
 .back {
   display: block;
   width: fit-content;
+  padding-block: 6px;
   margin-bottom: clamp(32px, 5vw, 56px);
   font-family: var(--mono);
   font-size: 14px;

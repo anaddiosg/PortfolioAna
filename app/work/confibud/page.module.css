@@ -1,11 +1,12 @@
 /* confibud uses its brand turquoise as the accent (darkened so small text stays readable) */
 .page {
   --case-accent: #00807c;
-  --band-bg: linear-gradient(135deg, #007f7a 0%, #00a8a0 55%, #2fc4bd 100%);
+  --band-bg: linear-gradient(135deg, #006b67 0%, #00857f 100%); /* dark enough for white text (WCAG AA) */
 }
 
 .store {
   display: inline-block;
+  padding-block: 6px;
   margin-top: 24px;
   font-family: var(--mono);
   font-size: 14px;
@@ -52,7 +53,7 @@
   color: var(--case-accent);
   padding-top: 6px;
 }
-.findings h4 {
+.findings h3 {
   font-family: var(--display);
   font-weight: 400;
   font-size: 24px;
