@@ -1,0 +1,66 @@
+/* confibud uses its brand turquoise as the accent (darkened so small text stays readable) */
+.page {
+  --case-accent: #00807c;
+  --band-bg: linear-gradient(135deg, #007f7a 0%, #00a8a0 55%, #2fc4bd 100%);
+}
+
+.store {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--case-accent);
+  text-underline-offset: 4px;
+}
+
+.listProse {
+  max-width: 68ch;
+}
+.listProse ul {
+  padding-left: 1.2em;
+}
+.listProse li {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.listProse li + li {
+  margin-top: 0.4em;
+}
+.listProse li::marker {
+  color: var(--case-accent);
+}
+
+/* Usability findings: number on the left, text on the right */
+.findings {
+  list-style: none;
+  padding: 0;
+  max-width: 820px;
+}
+.findings li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+}
+.findings li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.findingNumber {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--case-accent);
+  padding-top: 6px;
+}
+.findings h4 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+.findings p {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 68ch;
+}

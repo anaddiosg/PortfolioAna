@@ -185,7 +185,7 @@ export default function VixMicroCaseStudy() {
         <Prose paragraphs={c.learnings} />
       </Section>
 
-      <NextCase title="confibud" href="/work/confibud" ready={false} />
+      <NextCase title="confibud" href="/work/confibud" ready />
     </article>
   );
 }

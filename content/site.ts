@@ -59,6 +59,6 @@ export const projects: Project[] = [
     metrics: ["2,000+ users in two months", "16 articles read per user"],
     image: "/images/confibud-cover.png",
     imageAlt: "A hand holding a phone with the confibud app showing its notifications screen",
-    ready: false,
+    ready: true,
   },
 ];

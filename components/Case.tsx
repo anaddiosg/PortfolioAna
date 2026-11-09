@@ -206,11 +206,14 @@ export function Bars({ items }: { items: { step: string; value: number; label: s
 /* Phone screens side by side, each with a short caption */
 export function Gallery({
   items,
+  narrow = false,
 }: {
   items: { src: string; alt: string; caption: string; width: number; height: number }[];
+  /* narrow: caps each image at its real size, for low-resolution screens */
+  narrow?: boolean;
 }) {
   return (
-    <div className={styles.gallery}>
+    <div className={`${styles.gallery} ${narrow ? styles.galleryNarrow : ""}`}>
       {items.map((item) => (
         <figure key={item.src} className={`${styles.figure} ${styles.plain}`}>
           <Image
@@ -225,6 +228,65 @@ export function Gallery({
       ))}
     </div>
   );
+}
+
+/* A chain of steps with arrows between them (journeys, flows, processes).
+   Steps marked "pain" get a highlight; "loop" adds a note that the last step feeds the first. */
+export function Steps({
+  items,
+  caption,
+  loop,
+}: {
+  items: { title: string; note?: string; pain?: boolean }[];
+  caption?: string;
+  loop?: string;
+}) {
+  return (
+    <figure className={styles.stepsFigure}>
+      <ol className={styles.steps}>
+        {items.map((item, i) => (
+          <li key={item.title} className={item.pain ? styles.stepPain : undefined}>
+            <span className={styles.stepNumber}>{String(i + 1).padStart(2, "0")}</span>
+            <span className={styles.stepTitle}>{item.title}</span>
+            {item.note && <span className={styles.stepNote}>{item.note}</span>}
+          </li>
+        ))}
+      </ol>
+      {loop && <p className={styles.loop}>↺ {loop}</p>}
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  );
+}
+
+/* Dated milestones on a vertical line */
+export function Timeline({
+  items,
+  caption,
+}: {
+  items: { date: string; title: string; text: string }[];
+  caption?: string;
+}) {
+  return (
+    <figure className={styles.timelineFigure}>
+      <ol className={styles.timeline}>
+        {items.map((item) => (
+          <li key={item.date}>
+            <span className={styles.timelineDate}>{item.date}</span>
+            <div>
+              <h4>{item.title}</h4>
+              <p>{item.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  );
+}
+
+/* A full-width colored band that makes one section stand out */
+export function Band({ children }: { children: React.ReactNode }) {
+  return <div className={styles.band}>{children}</div>;
 }
 
 /* Link to the next case study at the bottom of the page */
