@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/content/site";
+import Logo from "./Logo";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         {/* Wordmark: links back to Home */}
         <Link href="/" className={styles.wordmark} aria-label={`${site.name}, home`}>
-          A<span className="dot" aria-hidden="true" />DIOS
+          <Logo className={styles.logo} />
         </Link>
 
         <nav aria-label="Main">
