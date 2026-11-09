@@ -57,7 +57,7 @@ export const projects: Project[] = [
     summary:
       "An educational app for young people, built end to end and side by side with developers, from research to a custom CMS.",
     metrics: ["2,000+ users in two months", "16 articles read per user"],
-    image: "/images/confibud-cover.png",
+    image: "/images/confibud-cover.jpg",
     imageAlt: "A hand holding a phone with the confibud app showing its notifications screen",
     ready: true,
   },

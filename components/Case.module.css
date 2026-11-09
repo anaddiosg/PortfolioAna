@@ -191,6 +191,13 @@
   background: var(--ink);
 }
 
+/* A single phone screen: small and centered */
+.figure.phoneFig {
+  max-width: 340px;
+  margin-inline: auto;
+  text-align: center;
+}
+
 /* Transparent PNGs (phones): no frame */
 .plain img {
   background: none;
@@ -526,6 +533,10 @@
 
 .band .prose p {
   color: #fff;
+}
+
+.band .figure figcaption {
+  color: rgb(255 255 255 / 0.8);
 }
 
 /* ---------- NEXT CASE ---------- */

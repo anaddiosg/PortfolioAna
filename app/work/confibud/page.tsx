@@ -65,28 +65,27 @@ export default function ConfibudCaseStudy() {
         <Prose paragraphs={[c.flowsIntro]} />
         <Cards items={c.flows.map((f) => ({ title: f.title, text: f.text }))} />
         <Gallery
-          narrow
           items={[
             {
               src: "/images/confibud/screen-home.png",
               alt: "confibud home dashboard with popular categories and new articles",
               caption: "Home dashboard by category",
-              width: 237,
-              height: 484,
+              width: 687,
+              height: 1400,
             },
             {
               src: "/images/confibud/screen-notifications.png",
               alt: "confibud notifications listing the latest articles",
               caption: "Notifications for new articles",
-              width: 237,
-              height: 484,
+              width: 687,
+              height: 1400,
             },
             {
               src: "/images/confibud/screen-ask.png",
               alt: "confibud screen where users type and send their own question",
               caption: "Ask your own question",
-              width: 237,
-              height: 484,
+              width: 687,
+              height: 1400,
             },
           ]}
         />
@@ -115,6 +114,15 @@ export default function ConfibudCaseStudy() {
               highlight: b.title === "Keeping it free with ads",
             }))}
           />
+          <Figure
+            src="/images/confibud/screen-article.png"
+            alt="A confibud article showing the author's name and credentials, save, share and listen options, and an ad at the bottom"
+            width={687}
+            height={1400}
+            caption="A live article: the author and credentials up top, the read-aloud option, and an ad that doesn't interrupt reading"
+            tone="plain"
+            phone
+          />
         </Section>
       </Band>
 
@@ -130,8 +138,8 @@ export default function ConfibudCaseStudy() {
         <Figure
           src="/images/confibud/cms.png"
           alt="The confibud CMS on a laptop, showing the contributors list (names and emails blurred for privacy)"
-          width={728}
-          height={429}
+          width={2000}
+          height={1081}
           caption="The confibud CMS · contributor names and emails blurred for privacy"
           tone="plain"
         />

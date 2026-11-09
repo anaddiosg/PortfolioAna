@@ -6,10 +6,10 @@ export const confibud = {
   label: "Case study · Co-founder",
   lead: "An educational app that gives young people in Mexico clear, reliable answers to the everyday questions nobody teaches them.",
   cover: {
-    src: "/images/confibud/cover.png",
-    alt: "confibud's turquoise brand background with its category icons: finance, sexuality, taxes, government procedures, personal growth and student resources",
+    src: "/images/confibud/cover.jpg",
+    alt: "The confibud logo next to its category icons: finance, sexuality, student resources, government procedures, personal growth and taxes",
     width: 1440,
-    height: 755,
+    height: 633,
   },
   appStore: "https://apps.apple.com/mx/app/confibud/id1615639133",
 

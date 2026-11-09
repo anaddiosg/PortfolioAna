@@ -114,6 +114,7 @@ export function Figure({
   height,
   caption,
   wide = false,
+  phone = false,
   tone = "card",
 }: {
   src: string;
@@ -122,10 +123,14 @@ export function Figure({
   height: number;
   caption?: string;
   wide?: boolean;
+  /* phone: a single phone screen, shown small and centered */
+  phone?: boolean;
   tone?: "card" | "dark" | "plain";
 }) {
   return (
-    <figure className={`${styles.figure} ${styles[tone]} ${wide ? styles.wide : ""}`}>
+    <figure
+      className={`${styles.figure} ${styles[tone]} ${wide ? styles.wide : ""} ${phone ? styles.phoneFig : ""}`}
+    >
       <Image
         src={src}
         alt={alt}
