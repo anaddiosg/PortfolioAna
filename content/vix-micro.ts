@@ -6,10 +6,10 @@ export const vixMicro = {
   label: "Case study · TelevisaUnivision",
   lead: "Bringing a younger audience to TelevisaUnivision's streaming platform with one-minute vertical series.",
   cover: {
-    src: "/images/vix-micro/cover.jpg",
-    alt: "A hand holding a phone with the ViX app open, featuring a ViX Micro title",
-    width: 2000,
-    height: 1188,
+    src: "/images/vix-micro/hero-catalog.jpg",
+    alt: "Dozens of phones showing ViX Micro key art for different vertical series",
+    width: 1440,
+    height: 540,
   },
 
   overview: [
