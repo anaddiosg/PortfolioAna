@@ -119,7 +119,7 @@ export default function ConfibudCaseStudy() {
             alt="A confibud article showing the author's name and credentials, save, share and listen options, and an ad at the bottom"
             width={687}
             height={1400}
-            caption="A live article: the author and credentials up top, the read-aloud option, and an ad that doesn't interrupt reading"
+            caption="A live article: the author and credentials up top, the read-aloud option, and an ad that doesn't interrupt reading. Captured before the switch to left-aligned text."
             tone="plain"
             phone
           />
