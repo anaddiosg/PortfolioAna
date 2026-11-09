@@ -40,7 +40,7 @@ export const about = {
       years: "2023–Present",
       role: "Product Designer",
       company: "TelevisaUnivision & ViX",
-      text: "Led the end-to-end design of ViX Micro (+35% young users and +20% premium users in Mexico in six months). I also designed 20 visual identities across 30 productions, including the 2026 World Cup and the 2024 Olympics.",
+      text: "Led the end-to-end design of ViX Micro (+35% young users and +20% premium users in Mexico in six months). I aligned Finance, Production and an external engineering agency to take the format from concept to launch, and in its first year ViX Micro reached 326M+ views.",
       link: { label: "Read the ViX Micro case study", href: "/work/vix-micro" },
     },
     {
