@@ -1,0 +1,256 @@
+/* ---------- INTRO ---------- */
+.intro {
+  display: grid;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: start;
+  padding-top: clamp(48px, 8vw, 104px);
+}
+
+@media (min-width: 900px) {
+  .intro {
+    grid-template-columns: 1fr 380px;
+  }
+}
+
+.introText > * {
+  animation: rise 0.7s ease both;
+}
+
+.headline {
+  margin-top: 24px;
+  font-family: var(--display);
+  font-weight: var(--display-weight);
+  font-size: clamp(34px, 4.6vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+}
+
+.story {
+  margin-top: 32px;
+  max-width: 62ch;
+}
+
+.story p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.story p + p {
+  margin-top: 1em;
+}
+
+.cvButton {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--violet);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.cvButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Photo with a lime block offset behind it */
+.photo {
+  position: relative;
+  isolation: isolate;
+  max-width: 380px;
+  margin-inline: auto;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  border-radius: var(--radius);
+  background: var(--fresh);
+  z-index: -1;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding-top: clamp(80px, 10vw, 128px);
+}
+
+.sectionTitle {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--display);
+  font-weight: var(--display-weight);
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.number {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--violet);
+}
+
+/* How I work: four cards */
+.principles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  list-style: none;
+  padding: 0;
+}
+
+.principles li {
+  flex: 1 1 240px;
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.principles h3 {
+  margin-top: 12px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.principles p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Experience: years on the left */
+.experience {
+  list-style: none;
+  padding: 0;
+}
+
+.experience li {
+  display: grid;
+  gap: 8px 32px;
+  padding-block: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 760px) {
+  .experience li {
+    grid-template-columns: 160px 1fr;
+  }
+}
+
+.years {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+.experience h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.company {
+  color: var(--muted);
+}
+
+.experience p {
+  margin-top: 8px;
+  max-width: 68ch;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.caseLink {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--violet);
+  text-underline-offset: 4px;
+}
+
+/* Recommendations */
+.quotes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  list-style: none;
+  padding: 0;
+}
+
+.quotes li {
+  flex: 1 1 340px;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--violet);
+}
+
+.quotes blockquote {
+  font-family: var(--display);
+  font-weight: var(--display-weight);
+  font-size: clamp(19px, 1.8vw, 22px);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.quoteName {
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+.quoteRole {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.quoteRelation {
+  margin-top: 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--violet);
+}
+
+/* Skills, tools, education */
+.details {
+  display: grid;
+  gap: 24px 48px;
+  margin-top: 32px;
+}
+
+@media (min-width: 760px) {
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.details dt {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.details dd {
+  margin: 6px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
