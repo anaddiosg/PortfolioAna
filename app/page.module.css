@@ -21,6 +21,22 @@
   margin-top: 28px;
 }
 
+/* Name + role line: wraps to a second line on small screens */
+.heroLabel {
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+
+/* Your name, first thing in the hero, in ink so it reads before the role */
+.name {
+  white-space: nowrap;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
 /* "clear, build-ready flows." highlighted in violet */
 .headline em {
   color: var(--violet);

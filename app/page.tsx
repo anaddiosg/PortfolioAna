@@ -8,8 +8,12 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className={`container ${styles.hero}`}>
-        <p className="label">
-          <span className="dot" aria-hidden="true" /> {site.role} · {site.location}
+        <p className={`label ${styles.heroLabel}`}>
+          <span className="dot" aria-hidden="true" />
+          <span className={styles.name}>{site.name}</span>
+          <span>
+            {site.role} · {site.location}
+          </span>
         </p>
 
         <h1 className={styles.headline}>
